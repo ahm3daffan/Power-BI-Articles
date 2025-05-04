@@ -1,0 +1,130 @@
+---
+
+  📊 Data Modeling & Business Intelligence – Learning Summary
+
+This document captures the key concepts, terminology, and insights I gained from the YouTube video:
+
+[  Data Modeling in Power BI - Data Modeling for Beginners  ](https://www.youtube.com/watch?v=a906b80lCE8)
+
+It serves as both a summary and a reference guide for foundational knowledge in   data modeling   and   business intelligence (BI)   using tools like   Power BI  .
+
+---
+
+   📘 Core Concepts and Terminology
+
+    1.   Table  
+
+A structured format consisting of   rows   and   columns  , used to store data. Each row represents a record, and each column represents an attribute or field.
+
+    2.   Fact Table  
+
+Holds   quantitative data   — often metrics or transactional records like sales, revenue, or quantities. This is the   center of analysis   in BI systems.
+
+    3.   Dimension Table  
+
+Contains   descriptive attributes   or categories (e.g., product name, customer type, region). These provide   context   to the numbers in the fact table.
+
+    4.   Calendar Table  
+
+A special   dimension table   that contains date-related fields (year, month, quarter, fiscal year, etc.). It supports   time intelligence   in reporting and analysis.
+
+    5.   Fact  
+
+An individual   measurement or data point  , such as sales amount or units sold. Facts are usually   numerical   and stored in fact tables.
+
+    6.   Dimension  
+
+Represents the   "who, what, where, when, why"   of a fact. Dimensions describe the context behind facts and are typically stored in dimension tables.
+
+    7.   Relationship  
+
+Defines   how tables are linked   together, based on shared fields (keys). Relationships are crucial for   joining   tables correctly during analysis.
+
+    8.   Many-to-One (M:1)  
+
+Occurs when   many rows in a fact table   relate to   one row in a dimension table  . This is the most common relationship type in Power BI.
+
+    9.   One-to-One (1:1)  
+
+Each record in one table corresponds to   exactly one   in another. Rare but useful in certain normalized models or lookup scenarios.
+
+    10.   One-to-Many (1:M)  
+
+The   reverse of many-to-one  , though often used interchangeably in modeling tools depending on perspective.
+
+    11.   Many-to-Many (M:M)  
+
+A   complex relationship   where multiple records in one table relate to multiple records in another. Requires a   bridge table   or   composite models   in Power BI.
+
+    12.   Key  
+
+A column used to   uniquely identify   records and to   connect   tables. Often includes   primary keys   and   foreign keys  .
+
+    13.   Primary Key  
+
+A field (or combination) that   uniquely identifies each row   in a table. Ensures   data integrity   and supports   relational joins  .
+
+    14.   Foreign Key  
+
+A field in one table that   references the primary key   in another table. It creates a   link   between related tables.
+
+    15.   Model  
+
+A set of   tables, relationships, and measures   created to support data analysis. In Power BI, the model defines how data is structured and interpreted.
+
+    16.   Star Schema  
+
+A widely-used modeling structure where a   central fact table   is surrounded by related   dimension tables  . Easy to query and performantly optimized.
+
+    17.   Snowflake Schema  
+
+An extension of the star schema, where   dimension tables are normalized   into related sub-tables. It reduces redundancy but may increase complexity.
+
+    18.   Measure  
+
+A   calculated field   (usually a DAX expression in Power BI) used for aggregations like sum, average, min, max, count, etc. Measures drive visuals and KPIs.
+
+    19.   Slice / Filter  
+
+Refers to breaking down or   subsetting data   based on dimension values. For example, filtering sales by year or product category.
+
+    20.   ETL (Extract, Transform, Load)  
+
+A critical process in BI pipelines:
+
+-   Extract  : Pull data from sources (databases, APIs, files).
+-   Transform  : Clean, structure, and enrich the data.
+-   Load  : Push the final data into the destination (e.g., Power BI model).
+
+---
+
+   🔄 Related Supporting Terms
+
+-   Aggregation   – The process of summarizing data (e.g., summing sales). Measures often perform aggregations.
+-   Data Pipeline   – The sequence of steps data flows through from source to reporting (often powered by ETL tools).
+-   Batch Process   – Scheduled ETL runs that update data periodically.
+-   Source   – The original location of the data (database, flat file, API, etc.).
+-   Refresh   – Updating the BI model or dashboard with the most recent data from the source.
+
+---
+
+   📈 Practical Relevance
+
+Understanding these concepts is essential for:
+
+- Designing efficient   data models   in Power BI.
+- Creating   reliable and maintainable   reports.
+- Ensuring   data integrity   and correct   aggregations  .
+- Collaborating with teams on   ETL design  ,   reporting logic  , and   data governance  .
+- Applying   best practices   in both self-service and enterprise BI environments.
+
+---
+
+   📌 Takeaways
+
+- Good data modeling is the   foundation   of meaningful business intelligence.
+- Using proper relationships, keys, and schema types helps avoid   ambiguous results   and improves performance.
+- Measures and dimensions should be clearly separated to ensure   readable and scalable reports  .
+- Knowing the   difference between star and snowflake schemas   helps tailor the model to your organization's data architecture.
+
+---
